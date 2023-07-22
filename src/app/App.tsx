@@ -1,13 +1,19 @@
-import { Link } from "react-router-dom";
 import { AppRouter } from "./router";
+import { Sidebar } from "../widgets/Sidebar/ui/Sidebar";
+import { Header } from "../widgets/Header";
+import { Footer } from "../widgets/Footer";
+import cls from "./App.module.scss";
 import "./styles/index.scss";
 
 export function App() {
   return (
-    <div>
-      <Link to={"/users"}>Пользователи</Link>
-      <Link to={"/books"}>Книги</Link>
-      <AppRouter />
-    </div>
+    <>
+      <Header />
+      <div className={cls.App}>
+        <Sidebar />
+        <AppRouter />
+      </div>
+      <Footer />
+    </>
   );
 }

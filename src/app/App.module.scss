@@ -1,0 +1,30 @@
+.App {
+    margin: 0 11.5%;
+    display: flex;
+    height: calc(100% - var(--header-height) - var(--footer-height));
+    transition: margin .4s ease;
+}
+
+@media (max-width: 1120px) {
+    .App {
+        margin: 0 64px;
+    }
+}
+
+@media (max-width: 800px) {
+    .App {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .App {
+        margin: 0 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .App {
+        margin: 0 16px;
+    }
+}

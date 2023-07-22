@@ -1,11 +1,14 @@
 @import 'reset';
 @import 'variables/global.scss';
 
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   font-family: 'Montserrat', sans-serif;
@@ -45,4 +48,16 @@ article>*+* {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #cecece;
+}
+
+#root {
+  max-width: var(--app-max-width);
+  height: 100%;
+  margin: auto;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: cadetblue;
 }
