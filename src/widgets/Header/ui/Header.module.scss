@@ -1,4 +1,17 @@
 .Header {
     background-color: chartreuse;
     height: var(--header-height);
+    transition: height .4s ease;
+}
+
+@media (max-width: 768px) {
+    .Header {
+        height: var(--header-tablet-height);
+    }
+}
+
+@media (max-width: 320px) {
+    .Header {
+        height: var(--header-mobile-height);
+    }
 }

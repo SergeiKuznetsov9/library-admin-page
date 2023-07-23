@@ -1,7 +1,13 @@
 :root {
   --app-max-width: 1440px;
+
   --header-height: 106px;
+  --header-tablet-height: 88px;
+  --header-mobile-height: 76px;
+
   --footer-height: 56px;
+  --footer-mobile-height: 104px;
+
   --fontsize-nav-m: 16px;
   --fontsize-nav-l: 18px;
   --fontsize-card-title: 22px;
@@ -12,11 +18,16 @@
   --fontsize-l: 24px;
   --fontsize-xl: 32px;
   --fontsize-xxl: 52px;
+
   --color-black: #363636;
   --color-light-grey: #f9f9fa;
   --color-grey: #727272;
   --color-negative: #f42c4f;
+
   --border-color: #bfc4c9;
+
+  --boxshadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18),
+    0px 1px 5px rgba(191, 196, 201, 0.24);
   --box-shadow-button: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18),
     0px 1px 5px rgba(191, 196, 201, 0.24);
   --box-shadow-button-menu-hover: 0px 2px 4px rgba(191, 196, 201, 0.2),
@@ -24,9 +35,9 @@
   --box-shadow-button-hover: 0px 2px 5px rgba(54, 54, 54, 0.1);
   --box-shadow-button-active: 0px 3px 4px rgba(222, 125, 11, 0.2),
     0px 1px 10px rgba(249, 89, 8, 0.2);
+
   --primary-background: linear-gradient(231.58deg, #f83600 -53.35%, #f9d423 297.76%);
   --background-main: #ffffff;
+
   --subtitle: #a7a7a7;
-  --boxshadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18),
-    0px 1px 5px rgba(191, 196, 201, 0.24);
 }

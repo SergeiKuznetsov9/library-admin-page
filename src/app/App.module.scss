@@ -20,11 +20,18 @@
 @media (max-width: 768px) {
     .App {
         margin: 0 64px;
+        height: calc(100% - var(--header-tablet-height) - var(--footer-mobile-height));
     }
 }
 
 @media (max-width: 480px) {
     .App {
         margin: 0 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .App {
+        height: calc(100% - var(--header-mobile-height) - var(--footer-mobile-height));
     }
 }
