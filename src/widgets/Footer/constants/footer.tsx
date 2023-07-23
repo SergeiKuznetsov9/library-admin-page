@@ -1,7 +1,7 @@
-import facebookIcon from "../../../shared/assets/facebook.svg";
-import instagramIcon from "../../../shared/assets/instagram.svg";
-import linkedinIcon from "../../../shared/assets/linkedin.svg";
-import vkIcon from "../../../shared/assets/vk.svg";
+import facebookIcon from "../assets/facebook.svg";
+import instagramIcon from "../assets/instagram.svg";
+import linkedinIcon from "../assets/linkedin.svg";
+import vkIcon from "../assets/vk.svg";
 
 export interface SocialLinkType {
   img: string | SVGSVGElement;
