@@ -32,8 +32,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
               Книги для брони
             </NavLink>
             {/* {pathname === RoutePath.books && ( */}
-            <div style={{overflow: 'hidden'}}>
-
+            <div style={{ overflow: "hidden" }}>
               <ul>
                 <li className={cls.listItem}>
                   <CheckBox onToggle={ex} label="Забронирована" />
@@ -56,17 +55,17 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
               Пользователи
             </NavLink>
             {/* {pathname === RoutePath.users && ( */}
-              <ul>
-                <li className={cls.listItem}>
-                  <CheckBox onToggle={ex} label="Все" />
-                </li>
-                <li className={cls.listItem}>
-                  <CheckBox onToggle={ex} label="Держатели книг" />
-                </li>
-                <li className={cls.listItem}>
-                  <CheckBox onToggle={ex} label="Заблокированные" />
-                </li>
-              </ul>
+            <ul>
+              <li className={cls.listItem}>
+                <CheckBox onToggle={ex} label="Все" />
+              </li>
+              <li className={cls.listItem}>
+                <CheckBox onToggle={ex} label="Держатели книг" />
+              </li>
+              <li className={cls.listItem}>
+                <CheckBox onToggle={ex} label="Заблокированные" />
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
