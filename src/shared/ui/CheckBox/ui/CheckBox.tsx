@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, useState } from "react";
+import { FC, InputHTMLAttributes } from "react";
 import cls from "./CheckBox.module.scss";
 import classNames from "classnames";
 
@@ -8,6 +8,7 @@ interface CheckBoxProps extends InputHTMLAttributes<HTMLInputElement> {
   classNameForInput?: string;
   label?: string;
   onToggle: () => void;
+  status: boolean;
 }
 
 export const CheckBox: FC<CheckBoxProps> = ({
@@ -16,22 +17,16 @@ export const CheckBox: FC<CheckBoxProps> = ({
   classNameForInput,
   label = "",
   onToggle,
+  status,
   ...otherProps
 }) => {
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = () => {
-    setIsChecked((status) => !status);
-    onToggle();
-  };
-
   return (
     <label className={classNames(cls.CheckBoxContainer, classNameForLabel)}>
       <input
         type="checkbox"
         className={cls.CheckBoxInput}
-        checked={isChecked}
-        onChange={handleCheckboxChange}
+        checked={status}
+        onChange={onToggle}
         {...otherProps}
       />
       <span className={classNames(cls.CheckBoxLabel, classNameForLabel)}>

@@ -1,5 +1,4 @@
 .Sidebar {
-    background-color: aquamarine;
     height: 100%;
     width: 285px;
     min-width: 285px;
@@ -20,8 +19,6 @@
     margin-bottom: 24px;
 }
 
-// transition: all 3.4s linear;
-
 .navLink:hover {
     transition: color 0.2s linear;
     color: #ff5253
@@ -34,8 +31,21 @@
     -webkit-background-clip: text;
 }
 
-.wrapperForLinks {
-    width: fit-content;
+.checkBoxesForBooksWrapper {
+    overflow: hidden;
+    height: 96px;
+    transition: height, 0.3s ease;
+}
+
+.checkBoxesForUsersWrapper {
+    overflow: hidden;
+    height: 120px;
+    transition: height, 0.3s ease;
+}
+
+.checkBoxesWrapperHidden {
+    height: 0px;
+    transition: height, 0.3s ease;
 }
 
 .listItem {
