@@ -6,6 +6,42 @@
     transition: width, min-width .4s ease;
 }
 
+.navLink {
+    font-size: var(--fontsize-nav-l);
+    font-weight: 700;
+    line-height: 28px;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    text-align: left;
+    color: var(--color-black);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+// transition: all 3.4s linear;
+
+.navLink:hover {
+    transition: color 0.2s linear;
+    color: #ff5253
+}
+
+.navLinkActive {
+    background-image: var(--primary-background);
+    background-clip: inherit;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.wrapperForLinks {
+    width: fit-content;
+}
+
+.listItem {
+    margin-bottom: 24px;
+}
+
 @media (max-width: 840px) {
     .Sidebar {
         width: 200px;
