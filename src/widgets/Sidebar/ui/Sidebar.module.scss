@@ -39,7 +39,7 @@
 
 .checkBoxesForUsersWrapper {
     overflow: hidden;
-    height: 120px;
+    height: 144px;
     transition: height, 0.3s ease;
 }
 
@@ -52,7 +52,7 @@
     margin-bottom: 24px;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 960px) {
     .Sidebar {
         width: 200px;
         min-width: 200px;
