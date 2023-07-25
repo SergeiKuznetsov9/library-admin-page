@@ -42,3 +42,11 @@
     border: 1px solid #a7a7a7;
   }
 }
+
+@media (max-width: 860px) {
+  .primary {
+    width: 140px;
+    height: 35px;
+    font-size: var(--fontsize-xxs);
+  }
+}

@@ -15,12 +15,14 @@ export const Button = ({
   view = "ghost",
   type = "button",
   ...otherProps
-}: ButtonProps) => (
-  <button
-    type={type}
-    className={classNames(className, cls[view])}
-    {...otherProps}
-  >
-    {children}
-  </button>
-);
+}: ButtonProps) => {
+  return (
+    <button
+      type={type}
+      className={classNames(cls[view], className)}
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
+};

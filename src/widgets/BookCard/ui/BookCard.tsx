@@ -4,11 +4,12 @@ import { Button } from "../../../shared/ui/Button/ui/Button";
 
 interface BookCardProps {
   className?: string;
-  title?: string;
   img?: any;
+  title?: string;
+  holder: string;
 }
 
-export const BookCard: FC<BookCardProps> = ({ title, img }) => {
+export const BookCard: FC<BookCardProps> = ({ title, img, holder }) => {
   return (
     <li className={cls.card}>
       <div className={cls.imgBlock}>
@@ -22,19 +23,35 @@ export const BookCard: FC<BookCardProps> = ({ title, img }) => {
         {title}
       </div>
 
-      <div className={cls.holderBlock}>Holderr</div>
+      <div className={cls.holderBlock}>
+        <span className={cls.holderLabel}>
+          Пользователь: <span className={cls.holderName}>{holder}</span>
+        </span>
+      </div>
 
       <div className={cls.statusWithButtonsBlock}>
-        <div className={cls.status}>Statustatustatustatustatus</div>
+        <div className={cls.status}>
+          <span className={cls.statusLabel}>
+            Срок: <span className={cls.statusInfo}>17.04.2021-24.04.2021</span>
+          </span>
+          <span className={cls.statusLabel}>
+            Статус: <span className={cls.statusInfo}>Выдана</span>
+          </span>
+        </div>
 
         <div className={cls.buttons}>
-          {/*         <button style={{ width: "174px", height: "40px" }}>
-          Отметка о возврате
-        </button> */}
-          <Button className={cls.cardButton} onClick={() => console.log("hello")} view="secondary">
+          <Button
+            onClick={() => console.log("hello")}
+            view="secondary"
+            className={cls.cardButton}
+          >
             Отметка о возврате
           </Button>
-          <Button className={cls.cardButton} onClick={() => console.log("hello")} view="primary">
+          <Button
+            onClick={() => console.log("hello")}
+            view="primary"
+            className={cls.cardButton}
+          >
             Продлить
           </Button>
         </div>
