@@ -59,3 +59,21 @@ article>*+* {
 .page-wrapper {
   flex-grow: 1;
 }
+
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+
+@media (max-width: 584px) {
+  .displayNoneOn584 {
+    display: none;
+  }
+
+  .displayBlockOn584 {
+    display: block;
+  }
+}

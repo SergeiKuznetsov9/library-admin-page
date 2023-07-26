@@ -5,7 +5,7 @@ import cls from "./Button.module.scss";
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   children?: ReactNode;
-  view?: "primary" | "secondary" | "ghost";
+  view?: "primary" | "secondary" | "filter" | "ghost";
   type?: JSX.IntrinsicElements["button"]["type"];
 }
 

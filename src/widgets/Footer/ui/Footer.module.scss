@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 77px 11.5% 0 11.5%;
+    margin: 0 11.5%;
     font-size: 16px;
     transition: height .4s ease;
 }
@@ -17,19 +17,19 @@
 
 @media (max-width: 1120px) {
     .Footer {
-        margin: 77px 64px 0 64px;
+        margin: 0 64px;
     }
 }
 
 @media (max-width: 800px) {
     .Footer {
-        margin: 77px 20px 0 20px;
+        margin: 0 20px;
     }
 }
 
 @media (max-width: 768px) {
     .Footer {
-        margin: 77px 64px 0 64px;
+        margin: 0 64px;
         height: var(--footer-mobile-height);
         flex-direction: column;
         line-height: 20px;
@@ -48,7 +48,7 @@
 
 @media (max-width: 768px) {
     .Footer {
-        margin: 62px 64px 0 64px;
+        margin: 0 64px;
     }
 }
 

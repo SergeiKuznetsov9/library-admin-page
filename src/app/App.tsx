@@ -4,6 +4,7 @@ import { Header } from "../widgets/Header";
 import { Footer } from "../widgets/Footer";
 import cls from "./App.module.scss";
 import "./styles/index.scss";
+import { SearchingBar } from "../widgets/SearchingBar";
 
 export function App() {
   return (
@@ -11,7 +12,10 @@ export function App() {
       <Header />
       <div className={cls.App}>
         <Sidebar />
-        <AppRouter />
+        <div>
+          <SearchingBar />
+          <AppRouter />
+        </div>
       </div>
       <Footer />
     </>
