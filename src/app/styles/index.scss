@@ -54,10 +54,8 @@ article>*+* {
   max-width: var(--app-max-width);
   height: 100%;
   margin: auto;
-  border: solid 1px black;
 }
 
 .page-wrapper {
   flex-grow: 1;
-  overflow-y: auto;
 }
