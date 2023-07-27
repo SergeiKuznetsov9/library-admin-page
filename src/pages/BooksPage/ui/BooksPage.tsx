@@ -1,10 +1,13 @@
+import { SearchingBar } from "../../../widgets/SearchingBar";
 import { BookCard } from "../../../widgets/BookCard";
 import img from "./image.png";
+import cls from "./BooksPage.module.scss";
 
 const BooksPage = () => {
   return (
-    <div style={{ paddingTop: "36px" }}>
-      <ul>
+    <div className={cls.BooksPage}>
+      <SearchingBar />
+      <ul className={cls.bookList}>
         <BookCard
           title="Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих"
           img={img}

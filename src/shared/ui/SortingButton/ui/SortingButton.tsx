@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import cls from "./SortingButton.module.scss";
 import { Button } from "../../../../shared/ui/Button/ui/Button";
-import { ReactComponent as SortAsc } from "../assets/sort-asc.svg";
-import { ReactComponent as SortDesc } from "../assets/sort-desc.svg";
+import sortAsc from "../assets/sort-asc.svg";
+import sortDesc from "../assets/sort-desc.svg";
 
 interface SortingButtonProps {
   className?: string;
@@ -23,12 +23,12 @@ export const SortingButton: FC<SortingButtonProps> = () => {
         {ascSort ? (
           <>
             <span className={cls.labelText}>Сортировка от А до Я</span>
-            <SortAsc />
+            <img src={sortAsc} alt="direct_asc" />
           </>
         ) : (
           <>
             <span className={cls.labelText}>Сортировка от Я до А</span>
-            <SortDesc />
+            <img src={sortDesc} alt="direct_desc" />
           </>
         )}
       </div>
