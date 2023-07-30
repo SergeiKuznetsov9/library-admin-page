@@ -1,5 +1,5 @@
 .BurgerButton {
-    display: none;
+    display: block;
     border: none;
     background-color: inherit;
     cursor: pointer;
@@ -53,17 +53,7 @@
     }
 }
 
-@media (max-width: 768px) {
-    .BurgerButton {
-        display: block;
-    }
-}
-
 @media (max-width: 480px) {
-    .BurgerButton {
-        display: block;
-    }
-
     .buttonMenu {
         height: 16px;
         width: 20px;

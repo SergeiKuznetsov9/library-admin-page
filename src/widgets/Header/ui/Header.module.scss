@@ -12,8 +12,9 @@
     height: unset;
 }
 
-.burgerButton {
+.mobileNavigationBar {
     margin-right: 24px;
+    display: none;
 }
 
 .burger {
@@ -69,6 +70,10 @@
     .Header {
         height: var(--header-tablet-height);
         margin: 0 64px;
+    }
+
+    .mobileNavigationBar {
+        display: block;
     }
 
     .greetingBlock,

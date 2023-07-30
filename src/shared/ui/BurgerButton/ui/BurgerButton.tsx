@@ -1,19 +1,22 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import classNames from "classnames";
 import cls from "./BurgerButton.module.scss";
 
 interface BurgerButtonProps {
   className?: string;
+  isOpened: boolean;
+  setIsOpened: () => void;
 }
 
-export const BurgerButton: FC<BurgerButtonProps> = ({ className }) => {
-  const [isOpened, setIsOpened] = useState(false);
+export const BurgerButton: FC<BurgerButtonProps> = ({
+  className,
+  isOpened,
+  setIsOpened,
+}) => {
   return (
     <button
       className={classNames(className, cls.BurgerButton)}
-      onClick={() => {
-        setIsOpened((isOpened) => !isOpened);
-      }}
+      onClick={setIsOpened}
       type="button"
     >
       <div
