@@ -1,0 +1,13 @@
+.userList {
+  margin-top: 32px;
+}
+
+.UsersPage {
+  margin-bottom: 48px;
+}
+
+@media (max-width: 320px) {
+  .UsersPage {
+    margin-bottom: 24px;
+  }
+}

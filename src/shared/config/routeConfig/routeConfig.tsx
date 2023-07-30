@@ -14,7 +14,7 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.USERS]: "/users",
 };
 
-const Redirect = <Navigate to="/books" replace={true} state={{ from: "/" }} />;
+const Redirect = <Navigate to="/users" replace={true} state={{ from: "/" }} />;
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.BOOKS]: {
