@@ -4,6 +4,7 @@ import cls from "./Sidebar.module.scss";
 import { NavLink, useLocation } from "react-router-dom";
 import { CheckBox } from "../../../shared/ui/CheckBox";
 import { RoutePath } from "../../../shared/config/routeConfig/routeConfig";
+import { NavigationItems } from "../../../shared/config/navigationConfig/navigationConfig";
 
 interface SidebarProps {
   className?: string;
@@ -17,78 +18,89 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [isHolders, setIsHolders] = useState(false);
   const [isLocked, setIsLocked] = useState(false);
 
+  const { books, users } = NavigationItems;
+
+  const booksCheckBoxesState = [
+    {
+      setValue: () => setIsBooked((isBooked) => !isBooked),
+      value: isBooked,
+    },
+    {
+      setValue: () => setIsIssued((isIssued) => !isIssued),
+      value: isIssued,
+    },
+  ];
+
+  const usersCheckBoxesState = [
+    {
+      setValue: () => setIsAll((isAll) => !isAll),
+      value: isAll,
+    },
+    {
+      setValue: () => setIsHolders((isHolders) => !isHolders),
+      value: isHolders,
+    },
+    {
+      setValue: () => setIsLocked((isLocked) => !isLocked),
+      value: isLocked,
+    },
+  ];
+
   return (
     <div className={classNames(className, cls.Sidebar)}>
       <ul>
         <li>
           <NavLink
-            to={"/books"}
+            to={books.to}
             className={({ isActive }) =>
               isActive
                 ? classNames(cls.navLink, cls.navLinkActive)
                 : cls.navLink
             }
           >
-            Книги для брони
+            {books.labelItem}
           </NavLink>
           <ul
             className={classNames(cls.checkBoxesForBooksWrapper, {
               [cls.checkBoxesWrapperHidden]: pathname !== RoutePath.books,
             })}
           >
-            <li className={cls.listItem}>
-              <CheckBox
-                onToggle={() => setIsBooked((isBooked) => !isBooked)}
-                status={isBooked}
-                label="Забронирована"
-              />
-            </li>
-            <li className={cls.listItem}>
-              <CheckBox
-                onToggle={() => setIsIssued((isIssued) => !isIssued)}
-                status={isIssued}
-                label="Выдана"
-              />
-            </li>
+            {books.checkBoxes.map((checkBox, index) => (
+              <li className={cls.listItem}>
+                <CheckBox
+                  onToggle={booksCheckBoxesState[index].setValue}
+                  status={booksCheckBoxesState[index].value}
+                  label={checkBox.labelFilter}
+                />
+              </li>
+            ))}
           </ul>
         </li>
         <li>
           <NavLink
-            to={"/users"}
+            to={users.to}
             className={({ isActive }) =>
               isActive
                 ? classNames(cls.navLink, cls.navLinkActive)
                 : cls.navLink
             }
           >
-            Пользователи
+            {users.labelItem}
           </NavLink>
           <ul
             className={classNames(cls.checkBoxesForUsersWrapper, {
               [cls.checkBoxesWrapperHidden]: pathname !== RoutePath.users,
             })}
           >
-            <li className={cls.listItem}>
-              <CheckBox
-                onToggle={() => setIsAll((isAll) => !isAll)}
-                status={isAll}
-                label="Все"
-              />
-            </li>
-            <li className={cls.listItem}>
-              <CheckBox
-                onToggle={() => setIsHolders((isHolders) => !isHolders)}
-                status={isHolders}
-                label="Держатели книг"
-              />
-            </li>
-            <li className={cls.listItem}>
-              <CheckBox
-                onToggle={() => setIsLocked((isLocked) => !isLocked)}
-                status={isLocked}
-                label="Заблокированные"
-              />
-            </li>
+            {users.checkBoxes.map((checkBox, index) => (
+              <li className={cls.listItem}>
+                <CheckBox
+                  onToggle={usersCheckBoxesState[index].setValue}
+                  status={usersCheckBoxesState[index].value}
+                  label={checkBox.labelFilter}
+                />
+              </li>
+            ))}
           </ul>
         </li>
       </ul>
