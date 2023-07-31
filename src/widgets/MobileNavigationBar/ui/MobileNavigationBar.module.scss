@@ -19,6 +19,15 @@
     left: 0;
 }
 
+.devider {
+    margin-left: -32px;
+    margin-right: -32px;
+    background-color: var(--border-color);
+    height: 1px;
+    border: none;
+
+}
+
 @media (max-width: 642px) {
     .menu {
         width: 288px;

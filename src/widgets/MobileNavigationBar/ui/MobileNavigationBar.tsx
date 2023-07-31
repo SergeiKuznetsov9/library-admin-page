@@ -2,6 +2,8 @@ import { FC, useEffect, useRef, useState } from "react";
 import { BurgerButton } from "../../../shared/ui/BurgerButton";
 import cls from "./MobileNavigationBar.module.scss";
 import classNames from "classnames";
+import { Navigation } from "../../../shared/ui/Navigation";
+import { UserMenu } from "../../../shared/ui/UserMenu";
 
 interface MobileNavigationBarProps {
   className?: string;
@@ -11,7 +13,6 @@ export const MobileNavigationBar: FC<MobileNavigationBarProps> = ({
   className,
 }) => {
   const [isOpened, setIsOpened] = useState(false);
-
   const dropDownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -56,8 +57,9 @@ export const MobileNavigationBar: FC<MobileNavigationBarProps> = ({
         className={classNames(cls.menu, { [cls.display]: isOpened })}
         ref={dropDownRef}
       >
-        <div className={cls.navigationBlock}>Navigation Block</div>
-        <div className={cls.userBlock}>User Block</div>
+        <Navigation />
+        <hr className={cls.devider} />
+        <UserMenu />
       </div>
     </div>
   );
