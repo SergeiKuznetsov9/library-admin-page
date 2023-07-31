@@ -1,15 +1,14 @@
-import cls from "./Navigation.module.scss";
-
-import classNames from "classnames";
 import { FC, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import classNames from "classnames";
 import { CheckBox } from "../../../../shared/ui/CheckBox";
 import { RoutePath } from "../../../../shared/config/routeConfig/routeConfig";
 import { NavigationItems } from "../config/navigationConfig";
+import cls from "./Navigation.module.scss";
 
-interface NavigationProps {
+type NavigationProps = {
   className?: string;
-}
+};
 
 export const Navigation: FC<NavigationProps> = () => {
   const pathname = useLocation().pathname;

@@ -1,13 +1,11 @@
+import { FC, useRef } from "react";
 import { SortingButton } from "../../../shared/ui/SortingButton";
 import { SearchingInput } from "../../../shared/ui/SearchingInput";
 import cls from "./SearchingBar.module.scss";
-import { FC, useRef } from "react";
 
-interface SearchingBarProps {
+type SearchingBarProps = {
   className?: string;
-  /*   hideOtherControlsForSearching: () => void;
-  showOtherControlsForSearching: () => void; */
-}
+};
 
 export const SearchingBar: FC<SearchingBarProps> = () => {
   const sortingButton = useRef<HTMLDivElement | null>(null);

@@ -1,12 +1,12 @@
 import { FC } from "react";
-import cls from "./UserMenu.module.scss";
-import { UserMenuItems } from "../config/userMenuConfig";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
+import { UserMenuItems } from "../config/userMenuConfig";
+import cls from "./UserMenu.module.scss";
 
-interface UserMenuProps {
+type UserMenuProps = {
   className?: string;
-}
+};
 
 export const UserMenu: FC<UserMenuProps> = () => {
   const { profile, logout } = UserMenuItems;

@@ -1,14 +1,12 @@
 import { FC, useState } from "react";
-import cls from "./SortingButton.module.scss";
-import { Button } from "../../../../shared/ui/Button/ui/Button";
+import { Button } from "../../../../shared/ui/Button";
 import sortAsc from "../assets/sort-asc.svg";
 import sortDesc from "../assets/sort-desc.svg";
+import cls from "./SortingButton.module.scss";
 
-interface SortingButtonProps {
+type SortingButtonProps = {
   className?: string;
-  /*   hideOtherControlsForSearching: () => void;
-  showOtherControlsForSearching: () => void; */
-}
+};
 
 export const SortingButton: FC<SortingButtonProps> = () => {
   const [ascSort, setAscSort] = useState<boolean>(true);

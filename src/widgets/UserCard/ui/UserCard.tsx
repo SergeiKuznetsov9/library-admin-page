@@ -1,10 +1,10 @@
 import { FC } from "react";
-import cls from "./UserCard.module.scss";
-import { Button } from "../../../shared/ui/Button/ui/Button";
+import { Button } from "../../../shared/ui/Button/";
 import { ThemeLabel, UserLabel } from "../../../shared/ui/UserLabel";
 import { BooksQuontity } from "./BooksQuontity/BooksQuontity";
+import cls from "./UserCard.module.scss";
 
-interface UserCardProps {
+type UserCardProps = {
   className?: string;
   img?: any;
   userName: string;
@@ -15,7 +15,7 @@ interface UserCardProps {
   status: "blocked" | "active";
   labelView?: any;
   isBlocked?: boolean;
-}
+};
 
 export const UserCard: FC<UserCardProps> = ({
   className,

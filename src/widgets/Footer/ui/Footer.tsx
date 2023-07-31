@@ -1,9 +1,13 @@
+import { FC } from "react";
 import { SOCIAL_LINK, SocialLinkType } from "../constants/footer";
 import { SocialLink } from "../../../shared/ui/SocialLink";
-
 import cls from "./Footer.module.scss";
 
-export const Footer = () => {
+type FooterProps = {
+  className?: string;
+};
+
+export const Footer: FC<FooterProps> = () => {
   const thisYear = new Date().getFullYear();
 
   return (

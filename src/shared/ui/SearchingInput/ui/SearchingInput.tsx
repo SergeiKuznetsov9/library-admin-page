@@ -1,12 +1,12 @@
+import { FC, useRef, useState } from "react";
 import classNames from "classnames";
+import { Button } from "../../../../shared/ui/Button";
 import iconSearch from "../assets/icon-search.svg";
 import iconSearchColor from "../assets/icon-search-color.svg";
 import iconClose from "../assets/icon-close.svg";
 import cls from "./SearchingInput.module.scss";
-import { FC, useRef, useState } from "react";
-import { Button } from "../../../../shared/ui/Button/ui/Button";
 
-interface SearchProps {
+type SearchProps = {
   className?: string;
   hideSorting: () => void;
   showSorting: () => void;
@@ -49,8 +49,6 @@ export const SearchingInput: FC<SearchProps> = ({
         <input
           className={cls.input}
           placeholder="Поиск книги или автора…"
-          // value={value}
-          // onChange={handleChange}
         />
         <img src={iconSearch} alt="close" className={cls.iconSearch} />
         <img

@@ -3,12 +3,10 @@
   height: 80px;
   border-radius: 0px 12px 0px 60px;
   padding: 6px 13.5px 18px 25.5px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   color: var(--color-white);
   font-size: var(--fontsize-s);
   font-weight: 600;
@@ -37,7 +35,6 @@
     padding-bottom: 14px;
     border-radius: 0px 12px 0px 32px;
     padding: 8px 8px 12px 11px;
-
   }
 
   .mark {

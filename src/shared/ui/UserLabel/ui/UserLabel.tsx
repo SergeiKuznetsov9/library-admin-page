@@ -1,19 +1,19 @@
 import { FC } from "react";
-import cls from "./UserLabel.module.scss";
 import classNames from "classnames";
 import alarm from "../assets/alarm.svg";
 import calendar from "../assets/calendar.svg";
+import cls from "./UserLabel.module.scss";
 
 export enum ThemeLabel {
   WARNING = "warning",
   PRIMARY = "primary",
 }
 
-interface UserLabelProps {
+type UserLabelProps = {
   className?: string;
   date: string;
   theme: ThemeLabel;
-}
+};
 
 export const UserLabel: FC<UserLabelProps> = ({ className, date, theme }) => {
   const defineMark = () => (theme === ThemeLabel.WARNING ? alarm : calendar);

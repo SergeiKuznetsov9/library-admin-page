@@ -1,13 +1,13 @@
 import { FC, useEffect, useRef, useState } from "react";
-import { BurgerButton } from "../../../shared/ui/BurgerButton";
-import cls from "./MobileNavigationBar.module.scss";
 import classNames from "classnames";
+import { BurgerButton } from "../../../shared/ui/BurgerButton";
 import { Navigation } from "../../../shared/ui/Navigation";
 import { UserMenu } from "../../../shared/ui/UserMenu";
+import cls from "./MobileNavigationBar.module.scss";
 
-interface MobileNavigationBarProps {
+type MobileNavigationBarProps = {
   className?: string;
-}
+};
 
 export const MobileNavigationBar: FC<MobileNavigationBarProps> = ({
   className,
