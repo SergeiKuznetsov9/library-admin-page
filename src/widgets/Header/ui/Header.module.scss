@@ -35,17 +35,6 @@
     line-height: 30px;
 }
 
-.greetingBlock {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
-
-.greeting {
-    font-weight: 600;
-    text-align: end;
-}
-
 @media (max-width: 1120px) {
     .Header {
         margin: 0 64px;
@@ -76,7 +65,7 @@
         display: block;
     }
 
-    .greetingBlock,
+    .headerUserMenu,
     .logo {
         display: none;
     }
