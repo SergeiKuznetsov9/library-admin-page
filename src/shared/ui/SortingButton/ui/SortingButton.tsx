@@ -9,7 +9,7 @@ type SortingButtonProps = {
 };
 
 export const SortingButton: FC<SortingButtonProps> = () => {
-  const [ascSort, setAscSort] = useState<boolean>(true);
+  const [ascSort, setAscSort] = useState(true);
 
   return (
     <Button

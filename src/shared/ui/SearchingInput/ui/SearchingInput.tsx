@@ -16,7 +16,7 @@ export const SearchingInput: FC<SearchProps> = ({
   hideSorting,
   showSorting,
 }) => {
-  const [isSearchExpanded, setIsSearchExpanded] = useState<boolean>(false);
+  const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const inputContainerRef = useRef<HTMLDivElement | null>(null);
 
   const onOpenSearching = () => {
