@@ -1,0 +1,13 @@
+.bookList {
+  margin-top: 32px;
+}
+
+.BooksPage {
+  margin-bottom: 48px;
+}
+
+@media (max-width: 320px) {
+  .BooksPage {
+    margin-bottom: 24px;
+  }
+}

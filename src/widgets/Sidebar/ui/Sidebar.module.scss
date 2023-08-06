@@ -1,0 +1,20 @@
+.Sidebar {
+    height: 100%;
+    width: 281px;
+    min-width: 281px;
+    transition: width, min-width .4s ease;
+}
+
+@media (max-width: 960px) {
+    .Sidebar {
+        width: 200px;
+        min-width: 200px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Sidebar {
+        display: none;
+    }
+}

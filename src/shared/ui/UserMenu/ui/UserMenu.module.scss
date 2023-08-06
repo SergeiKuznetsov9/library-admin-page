@@ -1,0 +1,38 @@
+.UserMenu {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  align-items: flex-end;
+}
+
+.navLink {
+  font-size: var(--fontsize-nav-l);
+  font-weight: 700;
+  line-height: 28px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  text-align: left;
+  color: var(--color-black);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLink:hover {
+  transition: color 0.2s linear;
+  color: #ff5253
+}
+
+.navLinkActive {
+  background-image: var(--primary-background);
+  background-clip: inherit;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .UserMenu {
+    align-items: flex-start;
+  }
+}
